@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 49a021cec7ff27c4ba753f9afc164a76
+guid: be993e81be32afd44bbe7ce1bb81177f
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Waving
+    second: Waving 1
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -35,7 +35,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Waving
+      name: Waving 1
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
@@ -526,23 +526,23 @@ ModelImporter:
         length: 0
         modified: 0
     skeleton:
-    - name: ybot@Waving(Clone)
+    - name: ybot@Waving 1(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Alpha_Surface
-      parentName: ybot@Waving(Clone)
+      parentName: ybot@Waving 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: Alpha_Joints
-      parentName: ybot@Waving(Clone)
+      parentName: ybot@Waving 1(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mixamorig:Hips
-      parentName: ybot@Waving(Clone)
+      parentName: ybot@Waving 1(Clone)
       position: {x: 0.000058749614, y: 1.0258601, z: -0.0003018029}
       rotation: {x: -2.2737364e-11, y: 2.6495625e-21, z: -1.1652901e-10, w: 1}
       scale: {x: 1, y: 0.99999994, z: 1}

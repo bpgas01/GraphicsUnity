@@ -48,8 +48,7 @@ public class CharacterControl : MonoBehaviour
         float forward = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
 
-        velocity.x = horizontal * MoveSpeed * Time.deltaTime;
-        velocity.z = forward * MoveSpeed * Time.deltaTime;
+        Vector3 move = forward * transform.forward + transform.right * horizontal;
 
         forward = Mathf.Lerp(prevForward, forward, animationSwapTime);
         horizontal = Mathf.Lerp(prevHorizontal, horizontal, animationSwapTime);
@@ -61,8 +60,8 @@ public class CharacterControl : MonoBehaviour
         prevForward = forward;
 
         
-        controller.Move(velocity);
-        transform.TransformDirectio
+        controller.Move(move * MoveSpeed * Time.deltaTime);
+        
 
         float mouseX = Input.GetAxis("Mouse X");
         float mouseY = Input.GetAxis("Mouse Y");
