@@ -42,8 +42,7 @@ public class CharacterControl : MonoBehaviour
         m_meshRenderer = GetComponentInChildren<SkinnedMeshRenderer>();
         m_rotateSpeedX *= 100f;
         m_rotateSpeedY *= 100f;
-        
-        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     // Update is called once per frame
@@ -59,6 +58,7 @@ public class CharacterControl : MonoBehaviour
         
         m_animator.SetFloat("Xpos", horizontal);
         m_animator.SetFloat("Ypos", forward);
+        m_animator.SetFloat("Velocity", m_velocity.y);
         
         prevHorizontal = horizontal;
         prevForward = forward;
@@ -109,23 +109,7 @@ public class CharacterControl : MonoBehaviour
             }
         }
 
-        //This is just for ease of use, ui elements in world did not like the locked camera
         
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (m_cursorLocked)
-            {
-                m_cursorLocked = false;
-                Cursor.lockState = CursorLockMode.Confined;
-                Cursor.visible = true;
-            }
-            else if (m_cursorLocked == false)
-            {
-                m_cursorLocked = true;
-                Cursor.lockState = CursorLockMode.Locked;
-                Cursor.visible = false;
-            }
-        }
     }
     
     public void Hologram() { m_meshRenderer.material = m_hologram; }
