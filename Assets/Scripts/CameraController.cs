@@ -6,6 +6,8 @@ public class CameraController : MonoBehaviour
 {
     public float mouseSensVertical = 100.0f;
 
+    
+
     public float maxRot = 90f;
     public float minRot = -90f;
     float mouseY = 0f;
@@ -15,8 +17,12 @@ public class CameraController : MonoBehaviour
         mouseY = Input.GetAxis("Mouse Y");
         //negative to invert
         float Y = -mouseY * mouseSensVertical * Time.deltaTime;
-
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Debug.Log(transform.localRotation.x);
+            Debug.Log(transform.rotation.x);
+        }
         Y = Mathf.Clamp(Y, minRot, maxRot);
-        transform.Rotate(new Vector3(1,0,0) * Y);
+        
     }
 }
